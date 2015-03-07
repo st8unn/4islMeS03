@@ -1,0 +1,9 @@
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\bin\Debug\4islMeS03.exe.config
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\bin\Debug\4islMeS03.exe
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\bin\Debug\4islMeS03.pdb
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\4islMeS03.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\_4islMeS03.Form1.resources
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\_4islMeS03.Properties.Resources.resources
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\4islMeS03.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\4islMeS03.exe
+c:\users\user\documents\visual studio 2013\Projects\4islMeS03\4islMeS03\obj\Debug\4islMeS03.pdb
