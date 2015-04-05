@@ -104,7 +104,7 @@ namespace _4islMeS03
                 for (int i = 1; i < vNumY; i++)
                 {
                     massF2d[vNumX - 2, i - 1] -= equ1.rigthF(minY + i * vStepY) / (vStepX * vStepX);
-                    coord = (vNumY - 1) + (i - 1) * (vNumX - 1);
+                    coord = (vNumX - 1) + (i - 1) * (vNumX - 1);
                     massF[coord - 1] -= equ1.rigthF(minY + i * vStepY) / (vStepX * vStepX);
                 }
             }
@@ -122,6 +122,7 @@ namespace _4islMeS03
                 for (int i = 1; i < vNumX; i++)
                 {
                     massD2d2[i - 1, j - 1] = massF2d[i - 1, j - 1] - massF[N];
+                    massF[N] = massF2d[i - 1, j - 1];
                     //massF2d[i - 1, j - 1] = equ1.Heat(minX + i * vStepX, minY + j * vStepY);
                     //massF[N] = equ1.Heat(minX + i * vStepX, minY + j * vStepY);
                     N++;
@@ -264,7 +265,7 @@ namespace _4islMeS03
             massSolution = new double[(vNumX - 1) * (vNumY - 1)];
             for (int i = 0; i < (vNumX-1)*(vNumY-1); i++)
             {
-                massSolution[i] = 0.1;
+                massSolution[i] = 0;
             }
             massSolution2d = new double[vNumX - 1, vNumY - 1];
             for (int i = 0; i < NMax; i++)
