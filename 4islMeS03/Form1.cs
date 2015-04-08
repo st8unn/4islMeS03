@@ -13,7 +13,8 @@ namespace _4islMeS03
     public partial class Form1 : Form
     {
         Koeffinder syst = new Koeffinder();
-        GradientSolver syst1 = new GradientSolver();
+        //GradientSolver syst1 = new GradientSolver();
+        grs04 syst1 = new grs04();
         public Form1()
         {
             InitializeComponent();

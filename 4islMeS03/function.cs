@@ -8,6 +8,7 @@ namespace _4islMeS03
 {
     class func
     {
+        //тестовые функции варианта 2 и 4.
         public double a=-1;
         public double b=1;
         public double c=-1;
