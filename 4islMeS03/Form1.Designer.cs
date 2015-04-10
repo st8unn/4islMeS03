@@ -46,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.run3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runToolStripMenuItem,
             this.changerToolStripMenuItem,
-            this.run2ToolStripMenuItem});
+            this.run2ToolStripMenuItem,
+            this.run3ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(944, 28);
@@ -208,6 +210,13 @@
             this.label8.Text = "label1";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // run3ToolStripMenuItem
+            // 
+            this.run3ToolStripMenuItem.Name = "run3ToolStripMenuItem";
+            this.run3ToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.run3ToolStripMenuItem.Text = "Run3";
+            this.run3ToolStripMenuItem.Click += new System.EventHandler(this.run3ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,6 +267,7 @@
         private System.Windows.Forms.ToolStripMenuItem changerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem run2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem run3ToolStripMenuItem;
     }
 }
 

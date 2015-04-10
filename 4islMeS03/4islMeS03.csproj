@@ -53,7 +53,10 @@
     </Compile>
     <Compile Include="function.cs" />
     <Compile Include="GradientSolver.cs" />
+    <Compile Include="gradWikiCuted.cs" />
+    <Compile Include="gradWikiCuted2.cs" />
     <Compile Include="grs04.cs" />
+    <Compile Include="grswiki.cs" />
     <Compile Include="Koeffinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

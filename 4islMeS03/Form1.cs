@@ -14,7 +14,8 @@ namespace _4islMeS03
     {
         Koeffinder syst = new Koeffinder();
         //GradientSolver syst1 = new GradientSolver();
-        grs04 syst1 = new grs04();
+        grswiki syst1 = new grswiki();
+        gradWikiCuted2 syst2 = new gradWikiCuted2();
         public Form1()
         {
             InitializeComponent();
@@ -106,7 +107,10 @@ namespace _4islMeS03
         private void changeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeToolStripMenuItem.Checked = !changeToolStripMenuItem.Checked;
-            syst.chang(!changeToolStripMenuItem.Checked);
+            bool temp = changeToolStripMenuItem.Checked;
+            syst.chang(!temp);
+            syst1.chang(!temp);
+            syst2.chang(!temp);
         }
 
         private void run2ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,7 +164,7 @@ namespace _4islMeS03
             vEpsil = Math.Min(0.1, Convert.ToDouble(textBox4.Text));
             textBox4.Text = vEpsil.ToString();
 
-            syst1.GradSolver(vNumX, vNumY, vNumMax, vEpsil);
+            syst1.GradSolverWiki(vNumX, vNumY, vNumMax, vEpsil);
             label7.Text = syst1.vDMeth.ToString("G3");
             label8.Text = syst1.vDSol.ToString("G3");
             dataGridView1.Rows.Clear();
@@ -176,5 +180,72 @@ namespace _4islMeS03
             this.Text = syst1.vIteration.ToString();
         }
 
+        private void run3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int vNumX, vNumY, vNumMax;
+            double vEpsil;
+            try
+            {
+                Convert.ToInt32(textBox1.Text);
+            }
+            catch (Exception)
+            {
+
+                textBox1.Text = "6";
+            }
+            vNumX = Math.Max(2, Convert.ToInt32(textBox1.Text));
+            textBox1.Text = vNumX.ToString();
+
+            try
+            {
+                Convert.ToInt32(textBox2.Text);
+            }
+            catch (Exception)
+            {
+
+                textBox2.Text = "6";
+            }
+            vNumY = Math.Max(2, Convert.ToInt32(textBox2.Text));
+            textBox2.Text = vNumY.ToString();
+
+            try
+            {
+                Convert.ToInt32(textBox3.Text);
+            }
+            catch (Exception)
+            {
+
+                textBox3.Text = "40";
+            }
+            vNumMax = Math.Max(1, Convert.ToInt32(textBox3.Text));
+            textBox3.Text = vNumMax.ToString();
+
+            try
+            {
+                Convert.ToDouble(textBox4.Text);
+            }
+            catch (Exception)
+            {
+                textBox4.Text = "0,001";
+            }
+            vEpsil = Math.Min(0.1, Convert.ToDouble(textBox4.Text));
+            textBox4.Text = vEpsil.ToString();
+
+            syst2.GradSolverWiki2(vNumX, vNumY, vNumMax, vEpsil);
+            label7.Text = syst2.vDMeth.ToString("G3");
+            label8.Text = syst2.vDSol.ToString("G3");
+            dataGridView1.Rows.Clear();
+            vNumX = syst2.vNumX;
+            vNumY = syst2.vNumY;
+            for (int i = 0; i < Math.Min(40, vNumX - 1); i++)
+            {
+                dataGridView1.Rows.Add(1);
+                for (int j = 0; j < Math.Min(10, vNumY - 1); j++)
+                {
+                    dataGridView1.Rows[i].Cells[j].Value = syst2.massD2d[i, j].ToString("G3");
+                }
+            }
+            this.Text = syst2.vIteration.ToString();
+        }
     }
 }
